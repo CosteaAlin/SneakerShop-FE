@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.full-height {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; 
+}
+
+.subscribe-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.subscribe-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subscribe-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-form input[type="text"], 
+.subscribe-form input[type="email"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.subscribe-form input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

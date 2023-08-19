@@ -1,0 +1,71 @@
+.product-details {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Add this */
+    margin-top: 50px;
+  }
+  
+  .product-image {
+    flex: 7;  /* This determines the proportion of space taken by the image container */
+    max-width: 1200px;  /* This sets a maximum width for the image container */
+  }
+  
+  .product-image img {
+    width: 100%;  /* This makes the image take up the full width of its container */
+    height: auto;  /* This maintains the image's aspect ratio */
+  }
+  
+  
+  .product-info {
+    flex: 3;  /* This determines the proportion of space taken by the product info container */
+    margin-left: 50px;
+  }
+  .add-to-cart {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #008CBA; /* Blue color */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #007B9A; /* Darker blue color when hovered */
+  }
+
+  .sizes button {
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sizes button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .sizes button.selected {
+    background-color: #007BFF; /* You can change this to any color you like */
+    color: white;
+  }
+
+  button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .green-text {
+    color: green;
+}
+
+  
+  
+  

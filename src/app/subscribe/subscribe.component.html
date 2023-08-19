@@ -1,0 +1,11 @@
+<div class="full-height">
+    <div class="subscribe-form">
+        <h2>Subscribe to our shop</h2>
+        <form (submit)="onSubmit()">
+            <input type="text" id="name" name="name" placeholder="Your Name">
+            <input type="email" id="email" name="email" placeholder="Your Email">
+            <input type="submit" value="Subscribe">
+        </form>
+        <p class="mt-2" [class.success]="isSuccess === true" [class.error]="isSuccess === false">{{ outputMessage }}</p>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="checkout-container mt-4">
+    <h2>Checkout</h2>
+  
+    <form (ngSubmit)="onCheckoutSubmit()" #checkoutForm="ngForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="order.firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="order.lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" [(ngModel)]="order.address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="order.email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="order.phone" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Complete Purchase</button>
+    </form>
+    <p class="mt-4" [ngClass]="{'success-message': isSuccess, 'error-message': !isSuccess}">{{ responseMessage }}</p>
+</div>

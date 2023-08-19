@@ -1,0 +1,24 @@
+<div *ngIf="product" class="product-details">
+    <div class="product-image">
+      <img [src]="product.image" alt="{{ product.name }}">
+    </div>
+    <div class="product-info">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price }}$</p>
+      <p>{{ product.description }}</p>
+      <div class="sizes">
+        <button class="mr-2"
+            *ngFor="let size of product.sizes" 
+            (click)="selectSize(size)"
+            [class.selected]="selectedSize === size">
+            {{ size }}
+        </button>
+    </div>
+    <button 
+    (click)="addToCart(product.id, 1)" class="add-to-cart mt-5" [disabled]="selectedSize === null">
+      Add to Cart
+  </button>
+  <p class="mt-2 text-center green-text" *ngIf="notificationMessage">{{ notificationMessage }}</p>
+    </div>
+  </div>
+  
